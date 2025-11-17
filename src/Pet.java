@@ -98,4 +98,17 @@ public class Pet {
 	public void setTutor(Tutor tutor) {
 		this.tutor = tutor;
 	}
+
+    @Override
+	public String toString() {
+	    return "Pet: " + nome + 
+	           " | Espécie: " + especie + 
+	           " | Raça: " + raca + 
+	           " | Porte: " + porte +
+	           " | Sexo: " + sexo + 
+	           " | Idade: " + idade + " anos" + 
+	           " | Peso: " + peso + "kg" + 
+	           " | Tutor: " + (tutor != null ? tutor.getNome() : "Não informado") +
+	           (observacoes.isEmpty() ? "" : " | Obs.: " + observacoes);
+    }
 }
